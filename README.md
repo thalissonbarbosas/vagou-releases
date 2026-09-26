@@ -33,8 +33,8 @@ plano.
 
 ## Download
 
-As versões vão ser publicadas em [Releases](../../releases), com o APK e o arquivo `SHA256SUMS`. Ainda não há versões
-publicadas aqui.
+Baixe a versão mais recente em [Releases](../../releases/latest): o APK e o arquivo `SHA256SUMS`. As novidades de cada
+versão estão no [CHANGELOG](CHANGELOG.md).
 
 Para conferir um APK baixado:
 
