@@ -53,4 +53,5 @@ O Vagou é um projeto independente e não é afiliado, patrocinado ou endossado 
 operadora. As telas acima usam dados fictícios. Os horários vêm do portal do plano: confirme sempre no app oficial antes
 de agendar.
 
-Este repositório só divulga o app (telas, novidades e downloads). O código-fonte é privado.
+Este repositório só divulga o app (telas, novidades e downloads). O código-fonte é privado porque contém detalhes
+sensíveis da integração com os portais dos planos suportados.
