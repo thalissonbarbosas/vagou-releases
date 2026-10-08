@@ -5,6 +5,17 @@ All notable changes to Vagou are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-10-07
+
+### Added
+- Ticket watches for Ticketmaster Brasil, no account needed: paste an event link or share it to Vagou, pick dates, sectors and ticket kinds (Inteira, Meia-entrada, PCD, Idoso), and Vagou rings, repeating until you look, when a matching ticket becomes available or when sales open. Tapping the alert opens the event's sale page.
+- Event pages that group several cities or dates let you pick which sale to watch.
+- Ticket watches check every 15 seconds to 5 minutes while a persistent "Vagou está de olho nos ingressos" notification is shown; its "Pausar" button stops them.
+
+### Changed
+- The Contas tab is now Conexões and lists your health plans and Ticketmaster.
+- The Terms of Use and Privacy Policy now cover ticket watching, so you'll be asked to accept them again.
+
 ## [0.4.0] - 2026-09-25
 
 ### Changed
