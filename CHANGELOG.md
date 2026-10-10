@@ -5,6 +5,21 @@ All notable changes to Vagou are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2026-10-10
+
+### Added
+- Conexões shows two boxes, Planos de saúde and Ingressos. Each opens its own list: every available plan with its connected accounts and a "Conectar uma conta" button, and Ticketmaster with its watched events.
+- "Monitorar" opens the same boxes so you pick what to watch, and an empty Home starts the same way. Without a connected plan, Planos de saúde takes you to connect one first.
+- Ticket watches and Ticketmaster connections show the Ticketmaster logo.
+
+### Changed
+- An account that needs attention shows a badge on the Planos de saúde box, and its notification opens the plan list directly.
+- The demonstration plan with fictitious data is gone.
+
+### Fixed
+- Ticket watches work again. Ticketmaster shut the address Vagou read events from, so every check failed with "A Ticketmaster pediu uma pausa".
+- When Ticketmaster blocks the connection (common on VPNs), the watch says "A Ticketmaster bloqueou a consulta" instead of asking for a pause.
+
 ## [0.5.0] - 2026-10-07
 
 ### Added
