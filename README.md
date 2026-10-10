@@ -4,13 +4,13 @@ O Vagou avisa no seu celular quando abre um horário com o médico que você que
 ingressos para o show que você quer na Ticketmaster.
 
 <p align="center">
-  <img src="screenshots/01-inicio.png" width="240" alt="Tela inicial com três monitoramentos ativos">
-  <img src="screenshots/02-vaga-encontrada.png" width="240" alt="Vaga encontrada, com horário, médico e unidade">
-  <img src="screenshots/03-vagas-por-dia.png" width="240" alt="Vagas encontradas agrupadas por dia e por médico">
+  <img src="screenshots/01-inicio.png" width="240" alt="Tela inicial com monitoramentos de consultas e de ingressos">
+  <img src="screenshots/02-monitorar.png" width="240" alt="Escolha do que monitorar: planos de saúde ou ingressos">
+  <img src="screenshots/03-vaga-encontrada.png" width="240" alt="Vaga encontrada, com horário, médico e unidade">
 </p>
 <p align="center">
-  <img src="screenshots/04-novo-monitoramento.png" width="240" alt="Criando um monitoramento: especialidade, unidade, médico, datas e frequência">
-  <img src="screenshots/05-atividade.png" width="240" alt="Histórico das vagas encontradas">
+  <img src="screenshots/04-novo-ingresso.png" width="240" alt="Monitorando ingressos: datas, setores, tipo de ingresso e frequência">
+  <img src="screenshots/05-ingresso-encontrado.png" width="240" alt="Ingresso disponível e avisos enviados">
   <img src="screenshots/06-ajustes.png" width="240" alt="Ajustes de verificações, notificações e privacidade">
 </p>
 

@@ -1,9 +1,24 @@
 # Changelog
 
-All notable changes to Vagou are documented in this file.
+Todas as mudanças relevantes do Vagou ficam registradas aqui.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/),
+e o projeto segue o [Versionamento Semântico](https://semver.org/lang/pt-BR/).
+
+## [0.6.0] - 2026-10-10
+
+### Adicionado
+- Conexões mostra dois quadros, Planos de saúde e Ingressos. Cada um abre sua própria lista: cada plano disponível com as contas conectadas e um botão "Conectar uma conta", e a Ticketmaster com os eventos monitorados.
+- "Monitorar" abre os mesmos quadros para você escolher o que vigiar, e a tela inicial vazia começa do mesmo jeito. Sem plano conectado, Planos de saúde leva primeiro a conectar um.
+- Monitoramentos de ingressos e a conexão da Ticketmaster mostram o logo da Ticketmaster.
+
+### Alterado
+- Uma conta que precisa de atenção mostra um aviso no quadro Planos de saúde, e a notificação dela abre direto a lista de planos.
+- O plano de demonstração com dados fictícios foi removido.
+
+### Corrigido
+- Os monitoramentos de ingressos voltaram a funcionar. A Ticketmaster desativou o endereço de onde o Vagou lia os eventos, e toda verificação falhava com "A Ticketmaster pediu uma pausa".
+- Quando a Ticketmaster bloqueia a conexão (comum em VPNs), o monitoramento diz "A Ticketmaster bloqueou a consulta" em vez de pedir uma pausa.
 
 ## [0.6.0] - 2026-10-10
 
@@ -22,68 +37,68 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.5.0] - 2026-10-07
 
-### Added
-- Ticket watches for Ticketmaster Brasil, no account needed: paste an event link or share it to Vagou, pick dates, sectors and ticket kinds (Inteira, Meia-entrada, PCD, Idoso), and Vagou rings, repeating until you look, when a matching ticket becomes available or when sales open. Tapping the alert opens the event's sale page.
-- Event pages that group several cities or dates let you pick which sale to watch.
-- Ticket watches check every 15 seconds to 5 minutes while a persistent "Vagou está de olho nos ingressos" notification is shown; its "Pausar" button stops them.
+### Adicionado
+- Monitoramento de ingressos da Ticketmaster Brasil, sem conta: cole o link do evento ou compartilhe com o Vagou, escolha datas, setores e tipos de ingresso (Inteira, Meia-entrada, PCD, Idoso), e o Vagou toca um alarme, repetindo até você ver, quando um ingresso que serve fica disponível ou quando a venda abre. Tocar no aviso abre a página de venda do evento.
+- Páginas de evento que reúnem várias cidades ou datas deixam você escolher qual venda monitorar.
+- Os monitoramentos de ingressos verificam de 15 segundos a 5 minutos enquanto a notificação fixa "Vagou está de olho nos ingressos" aparece; o botão "Pausar" dela interrompe.
 
-### Changed
-- The Contas tab is now Conexões and lists your health plans and Ticketmaster.
-- The Terms of Use and Privacy Policy now cover ticket watching, so you'll be asked to accept them again.
+### Alterado
+- A aba Contas agora se chama Conexões e lista seus planos de saúde e a Ticketmaster.
+- Os Termos de Uso e a Política de Privacidade agora cobrem o monitoramento de ingressos, por isso você vai aceitá-los de novo.
 
 ## [0.4.0] - 2026-09-25
 
-### Changed
-- Found slots now come with a reminder to confirm the times in the Humana app before booking.
+### Alterado
+- As vagas encontradas agora vêm com um lembrete para confirmar os horários no app da Humana antes de agendar.
 
 ## [0.3.0] - 2026-09-24
 
-### Added
-- "Todas as unidades": a doctor-name watch can now search every unit of the specialty, like the official app's name search, instead of only the units you picked. The editor shows where a matching doctor works.
-- A watch can combine doctors you picked with a doctor name: you get slots from the picked doctors and from anyone whose name matches.
+### Adicionado
+- "Todas as unidades": um monitoramento por nome de médico agora pode buscar em todas as unidades da especialidade, como a busca por nome do app oficial, em vez de só nas unidades escolhidas. O editor mostra onde atende o médico encontrado.
+- Um monitoramento pode combinar médicos escolhidos com um nome de médico: você recebe vagas dos médicos escolhidos e de qualquer um cujo nome combine.
 
-### Changed
-- Changing the units of a watch keeps the typed doctor name and the picked doctors that still work there.
+### Alterado
+- Mudar as unidades de um monitoramento mantém o nome de médico digitado e os médicos escolhidos que ainda atendem lá.
 
-### Fixed
-- Watches by doctor name or for any doctor now see a doctor who just opened an online agenda at the next check, instead of up to 24 hours later.
+### Corrigido
+- Monitoramentos por nome de médico ou por qualquer médico agora enxergam um médico que acabou de abrir agenda online na próxima verificação, em vez de até 24 horas depois.
 
 ## [0.2.0] - 2026-09-24
 
-### Added
-- A silent persistent notification shows how many watches are running and when the next check is. Its "Desativar" button turns it off until you switch it back on in Ajustes > Notificação fixa.
+### Adicionado
+- Uma notificação fixa e silenciosa mostra quantos monitoramentos estão rodando e quando é a próxima verificação. O botão "Desativar" dela a desliga até você reativar em Ajustes > Notificação fixa.
 
-### Fixed
-- Specialties such as Cardiologia no longer fail to list doctors when some of their units have no doctor with an online agenda; those units just show none.
-- When a unit's doctor list can't be loaded, the other units still show, and you can still watch any doctor by name.
-- A check over several units no longer fails as a whole when one unit answers in an unexpected format; that unit is skipped and the others are checked.
+### Corrigido
+- Especialidades como Cardiologia não falham mais ao listar médicos quando algumas unidades não têm médico com agenda online; essas unidades só aparecem vazias.
+- Quando a lista de médicos de uma unidade não carrega, as outras unidades continuam aparecendo, e você ainda pode monitorar qualquer médico pelo nome.
+- Uma verificação em várias unidades não falha mais por inteiro quando uma unidade responde num formato inesperado; essa unidade é pulada e as outras são verificadas.
 
 ## [0.1.0] - 2026-09-24
 
-First pilot build. Vagou watches your health plan's agenda from your phone and notifies you when a slot opens with the doctor you want. Everything stays on the phone: no server, no account, no telemetry.
+Primeira versão do piloto. O Vagou vigia a agenda do seu plano de saúde pelo celular e avisa quando abre uma vaga com o médico que você quer. Tudo fica no celular: sem servidor, sem cadastro, sem telemetria.
 
-### Added
-- Humana Saúde Nordeste support: connect with your beneficiary portal login, see the plans and patients (holder and dependents) found on the account, and pick specialties, units and doctors from the portal's own lists.
-- Watches: choose the plan, patient, specialty and one or more units, then any doctor, specific doctors, or any doctor whose name contains what you type. Limit them by dates, weekdays and time of day, and set how often to check: as often as every 10 minutes, with a higher minimum for watches that cover many doctors.
-- Background checks that keep running with the app closed, and a notification as soon as a new slot appears, with a shortcut to the plan's official app to book it.
-- Alerts when an account needs you (wrong password, locked account, new terms to accept on the portal): its checks pause until you resume them, and Vagou never accepts anything for you.
-- Notices when the plan portal is down or checks are running late.
-- Watch details with the open slots found, grouped by day and by doctor, each doctor in its own color, with a doctor filter. Taken and past slots drop off the list.
-- Activity history of what was checked and found.
-- Accounts screen with your plan cards (carteirinhas).
-- Demo provider ("Demonstração") with fake data, to try every screen without a plan login.
-- Settings: light theme by default (dark or follow the system), discreet notifications that only say "Nova vaga encontrada", lock-screen details on or off, pause everything, a diagnostics report without personal data, and "Apagar tudo" to erase everything Vagou stored on the phone.
-- Terms of Use and Privacy Policy to accept on first launch, readable any time from Settings.
+### Adicionado
+- Suporte à Humana Saúde Nordeste: conecte com o login do portal do beneficiário, veja os planos e pacientes (titular e dependentes) da conta, e escolha especialidades, unidades e médicos nas listas do próprio portal.
+- Monitoramentos: escolha o plano, o paciente, a especialidade e uma ou mais unidades, e então qualquer médico, médicos específicos ou qualquer médico cujo nome contenha o que você digitar. Limite por datas, dias da semana e horário, e defina a frequência: a cada 10 minutos no mínimo, com um mínimo maior para monitoramentos que cobrem muitos médicos.
+- Verificações em segundo plano que continuam com o app fechado, e uma notificação assim que surge uma vaga nova, com atalho para o app oficial do plano para agendar.
+- Avisos quando uma conta precisa de você (senha errada, conta bloqueada, novos termos para aceitar no portal): as verificações dela pausam até você retomar, e o Vagou nunca aceita nada por você.
+- Avisos quando o portal do plano está fora do ar ou as verificações estão atrasadas.
+- Detalhes do monitoramento com as vagas encontradas, agrupadas por dia e por médico, cada médico com sua cor, e filtro por médico. Vagas ocupadas ou passadas saem da lista.
+- Histórico de atividade do que foi verificado e encontrado.
+- Tela de contas com as carteirinhas dos seus planos.
+- Plano de demonstração ("Demonstração") com dados fictícios, para experimentar todas as telas sem login de plano.
+- Ajustes: tema claro por padrão (escuro ou seguir o sistema), notificações discretas que só dizem "Nova vaga encontrada", detalhes na tela de bloqueio ligados ou desligados, pausar tudo, relatório de diagnóstico sem dados pessoais, e "Apagar tudo" para apagar tudo o que o Vagou guardou no celular.
+- Termos de Uso e Política de Privacidade para aceitar na primeira abertura, que podem ser lidos a qualquer momento em Ajustes.
 
-### Fixed
-- Humana login no longer stops at the plan step, blocked by the portal's Cloudflare protection.
-- Links to the Privacy Policy inside the Terms of Use now open the policy.
-- On accounts with more than one plan, checks for a plan now run in that plan's portal session. Before, they could run in the last plan selected and find nothing, or the wrong slots.
-- A slot that drops out of one check and comes back is no longer shown as taken, and editing what a watch searches for starts its results fresh instead of marking the old ones as taken.
-- "Verificar agora" says when the next manual check unlocks instead of doing nothing.
+### Corrigido
+- O login da Humana não para mais na etapa do plano, bloqueado pela proteção Cloudflare do portal.
+- Os links para a Política de Privacidade dentro dos Termos de Uso agora abrem a política.
+- Em contas com mais de um plano, as verificações de um plano agora rodam na sessão do portal desse plano. Antes, podiam rodar no último plano selecionado e não achar nada, ou achar as vagas erradas.
+- Uma vaga que some numa verificação e volta não aparece mais como ocupada, e editar o que um monitoramento busca recomeça os resultados em vez de marcar os antigos como ocupados.
+- "Verificar agora" diz quando a próxima verificação manual libera em vez de não fazer nada.
 
-### Security
-- Passwords, sessions and all app data are encrypted with a key kept in the Android Keystore, and are left out of backups and device transfers.
-- Vagou talks only to the plan portal's own addresses, over HTTPS, trusting only the system's certificates. No analytics, crash reporting or ads.
-- The login screen can't be captured in screenshots or the recent-apps preview.
+### Segurança
+- Senhas, sessões e todos os dados do app são criptografados com uma chave guardada no Android Keystore, e ficam fora dos backups e das transferências entre aparelhos.
+- O Vagou só conversa com os endereços do próprio portal do plano, por HTTPS, confiando apenas nos certificados do sistema. Sem analytics, relatório de falhas ou anúncios.
+- A tela de login não aparece em capturas de tela nem na prévia de apps recentes.
 
